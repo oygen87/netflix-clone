@@ -260,10 +260,13 @@ h1, p {
           right: 1rem !important;
         }
       .search-wrapper {
+        max-height: 2rem;
+        height: 2rem;
         background-color:#333;
         padding:0.2rem;
         width:100%;
         display:flex;
+        align-items: center;
         border-radius:0.5rem;
         svg {
           margin:0.2rem;
@@ -278,7 +281,7 @@ h1, p {
             outline: none;
           }
           &.input-unfocus {
-            width:50px !important;
+            width:4rem !important;
           }
         }
       }
