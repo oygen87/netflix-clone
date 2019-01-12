@@ -246,7 +246,6 @@ h1, p {
         color:white;
         border:none;
         padding: 0 0.75rem;
-        //position:absolute;
         right:0;
         height: 2rem;
         outline: none;
@@ -281,7 +280,7 @@ h1, p {
             outline: none;
           }
           &.input-unfocus {
-            width:4rem !important;
+            width:5rem !important;
           }
         }
       }
