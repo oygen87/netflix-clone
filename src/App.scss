@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+$black: #000;
+$white: #FFF;
+$grey: #7F7F7F;
+
+$body-font-family: Roboto;
+$body-font-color: #EEE;
+$body-background: #171717;
+$background: #333;
+
+$profile-background: #272727;
+$search-banner-bg: #444;
+$search-banner-font-color: #999;
+
 .fastest{
   animation-duration: .2s;
 }
@@ -10,21 +23,18 @@ button {
   }
 }
 h1, p {
-    font-family: Roboto;
+    font-family: $body-font-family;
     font-size:1rem;
   }
   .splash {
-    background-color: black;
-    position: absolute;
+    background-color: $black;
+    position: fixed;
     height:100vh;
     width: 100vw;
     display:flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
-    img {
-
-    }
   }
   .movie-container {
     display: flex;
@@ -48,26 +58,26 @@ h1, p {
         width: 100%;
         object-fit: cover;
         object-position: 100% 80%;
-        box-shadow: 0 0 8px 8px black inset;
+        box-shadow: 0 0 8px 8px $black inset;
       }
   }
   body {
-    background-color: #171717;
-    color: #eee;
+    background-color: $body-background;
+    color: $body-font-color;
     padding: 0;
     margin: 0;
   }
   footer .bottom-nav{
     bottom: 0;
     height: 4rem;
-    background-color: black;
+    background-color: $black;
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center; 
     transition:0.2s;
     .bottom-nav-labels {
-    color:white;
+    color:$white;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -77,7 +87,7 @@ h1, p {
     position: fixed;
     bottom: 0;
     height: 4rem;
-    background-color: black;
+    background-color: $black;
     width: 100vw;
     display:flex;
     justify-content: space-around;
@@ -92,18 +102,18 @@ h1, p {
     }
   }
   .bottom-nav-labels {
-      color:white;
+      color:$white;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
   html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-  }
-  img {
-    height: 25vh;
-  }
+    max-width: 100%;
+    overflow-x: hidden;
+}
+img {
+  height: 25vh;
+}
   .details-poster-container {
     display: flex;
     justify-content: center;
@@ -136,14 +146,14 @@ h1, p {
     display:flex;
     justify-content: space-evenly;
     margin-top:1rem;
-    color: #FFF;
+    color: $white;
     font-weight: bold;
 }
 .movie-details-desc {
     font-weight: 100;
 }
 .details-cast {
-  color:grey;
+  color:$grey;
   font-size:0.8rem;
 }
   .t-green {
@@ -151,7 +161,7 @@ h1, p {
     font-weight: bold;
   }
   .t-grey {
-    color: grey
+    color: $grey
   }
   .red-play {
       background-color:red;
@@ -168,14 +178,14 @@ h1, p {
   }
   .menu-container {
     height:92vh;
-    background-color: #272727;
+    background-color: $profile-background;
     .profile-container >* {
       flex: 4 4 30%;
     }
     .profile-container {
       position: fixed;
       height:12rem;
-      background-color: black;
+      background-color: $black;
       top:0;
       width:100%;
       display:flex;
@@ -189,7 +199,7 @@ h1, p {
       }
       .edit-profile {
         text-align:center;
-        color: grey;
+        color: $grey;
         div {
           svg {
             margin: 0 0.5rem;
@@ -206,9 +216,9 @@ h1, p {
       }
       span {
         font-size:0.8rem;
-        color: grey;
+        color: $grey;
         &.active-user {
-          color : white;
+          color : $white;
         }
       }
     }
@@ -217,7 +227,7 @@ h1, p {
       padding-top:12rem;
       .menu-item-more {
         display:block;
-        border-bottom:0.2rem solid black;
+        border-bottom:0.2rem solid $black;
         padding:0.5rem;
         span {
           margin-left:1rem;
@@ -227,7 +237,7 @@ h1, p {
         display:block;
         padding:0.5rem;
         &.version {
-          color:grey;
+          color:$grey;
         }
         &.version {
           min-height:100%;
@@ -239,8 +249,8 @@ h1, p {
   .search-bar-page-wrapper {
     .search-banner {
       margin-top:0.25rem;
-      background-color:#444;
-      color:#999;
+      background-color: $search-banner-bg;
+      color: $search-banner-font-color;
       padding:0.25rem 0.75rem;
       font-weight: bold;
       font-size: 0.8rem;
@@ -251,12 +261,12 @@ h1, p {
     }
     .search-bar-top-container {
       transition:0.5s;
-      background-color: black;
+      background-color: $black;
       padding:0.5rem;
       display:flex;
       button {
-        background-color:black;
-        color:white;
+        background-color:$black;
+        color:$white;
         border:none;
         padding: 0 0.75rem;
         right:0;
@@ -274,7 +284,7 @@ h1, p {
       .search-wrapper {
         max-height: 2rem;
         height: 2rem;
-        background-color:#333;
+        background-color: $background;
         padding:0.2rem;
         width:100%;
         display:flex;
@@ -284,11 +294,11 @@ h1, p {
           margin:0.2rem;
         }
         input {
-          background-color:#333;
+          background-color: $background;
           border: 0;
           margin-left:0.5rem;
           width:100%;
-          color: white;
+          color: $white;
           &:focus {
             outline: none;
           }

@@ -4,13 +4,30 @@ import Start from './pages/Start';
 import Details from './pages/Details';
 import Hamburger from './pages/Hamburger';
 import SearchPage from './pages/SearchPage';
-import Splash from './pages/Splash';
+import { Splash } from './pages/Splash';
 import { Home, Search, Download, Menu } from 'react-feather';
 import { context } from './store/MyContext.js';
 
 
 class App extends Component {
   static contextType = context;
+  state = {};
+  
+  constructor(props) {
+    super();
+    this.state = {
+      showSplash: true,
+      fadeOut: false
+    };
+
+    setTimeout(() => {
+      this.setState({fadeOut: true});
+    }, 3000);
+    setTimeout(() => {
+      this.setState({showSplash: false});
+    }, 4000);
+  }
+
   render() {
     let View;
     switch (this.context.view) {
@@ -30,11 +47,13 @@ class App extends Component {
         View = <Start/>;
     }
 
+    const splash = this.state.showSplash ? <Splash fadeOut={this.state.fadeOut} /> : "";
+
     return (
       <div>
         <div className="App">
 
-<Splash />
+          {splash}
 
           {View}
 
