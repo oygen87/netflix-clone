@@ -69,7 +69,7 @@ export default class SearchPage extends Component {
                         <Search fill="#333" stroke="grey" height="18" width="18" strokeWidth="3" />
                         <input onKeyDown={this.handleInput} onInput={this.handleInput} ref={this.textInput} id="input" className={this.state.input.length > 0 ? "" : "input-unfocus"} type="text" placeholder="Search" onFocus={this.handleFocus} onBlur={this.handleBlur} />
                     </div>
-                    <button onClick={this.handleCancel} id="cancel" className={this.state.init ? "d-none" : this.state.focus ? "d-flex animated slideInRight fastest" : "animated slideOutRight fastest"}>Cancel</button>
+                    <button onClick={this.handleCancel} id="cancel" className={this.state.init ? "d-none" : this.state.focus ? "d-flex animated slideInRight fastest" : "d-none animated slideOutRight fastest"}>Cancel</button>
                     <span onClick={this.handleCancel} id="cancel-input" className={!this.state.focus ? !this.state.input.length > 0 ? "d-none" : "cancel-unfocused" : this.state.input.length > 0 ? "" : "d-none"}><XCircle height="18" width="18" color="grey" /></span>
                 </div>
                 
