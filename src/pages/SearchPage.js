@@ -14,47 +14,26 @@ export default class SearchPage extends Component {
     componentDidMount = () => {
         this.setState({ focus: false, init: true });
     }
-    handleFocus = (e) => {
+    handleFocus = () => {
         this.setState({ focus: true, init: false });
     }
-    handleBlur = (e) => { /*
-        e.stopPropagation();
-        e.nativeEvent.stopPropagation();
-        console.log("BLUR", e.target)
-        this.setState({ focus: false });*/
-    }
-    handleClick = (e) => {
-        console.log(e.target);
-        /*
-        e.nativeEvent.stopPropagation();
-        console.log(e.target);
-        if(e.target.id === "search-wrapper") {
-            this.textInput.current.value = "";
-            this.setState({isTyping : false});
-            return;
-        }*/
+    handleClick = () => {
         if (this.state.focus === false) {
             this.setState({ focus: true });
             this.textInput.current.focus();
         }
     }
-    handleInput = (e) => {
-        if (e.target.value) {
-
-        }
+    handleInput = () => {
         this.setState({ focus: true, input: this.textInput.current.value });
     }
-    handleCancel = (e) => {
-        console.log("CANCEL");
+    handleCancel = () => {
         this.textInput.current.value = "";
         this.setState({ focus: false, input: this.textInput.current.value });
     }
-    handleClickPage = (e) => {
-        console.log(e.target.id)
-            ; if (e.target.id !== "input") {
-                console.log("YEEEHA");
+    handleClickPage = (e) => { 
+        if (e.target.id !== "input") {
                 this.setState({ focus: false });
-            }
+        }
     }
     render() {
         const movies = this.state.input.length > 0 ? this.context.movies
