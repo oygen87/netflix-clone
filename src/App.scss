@@ -13,6 +13,19 @@ h1, p {
     font-family: Roboto;
     font-size:1rem;
   }
+  .splash {
+    background-color: black;
+    position: absolute;
+    height:100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    img {
+
+    }
+  }
   .movie-container {
     display: flex;
     overflow-x: scroll;

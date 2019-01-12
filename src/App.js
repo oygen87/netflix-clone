@@ -4,6 +4,7 @@ import Start from './pages/Start';
 import Details from './pages/Details';
 import Hamburger from './pages/Hamburger';
 import SearchPage from './pages/SearchPage';
+import Splash from './pages/Splash';
 import { Home, Search, Download, Menu } from 'react-feather';
 import { context } from './store/MyContext.js';
 
@@ -33,6 +34,7 @@ class App extends Component {
       <div>
         <div className="App">
 
+<Splash />
 
           {View}
 
