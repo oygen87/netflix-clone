@@ -14,19 +14,19 @@ class App extends Component {
     let View;
     switch (this.context.view) {
       case "HOME":
-        View = <div className="animated fadeIn faster"><Start></Start></div>;
+        View = <div className="animated fadeIn faster"><Start/></div>;
         break;
       case "DETAILS":
-        View = <Details></Details>;
+        View = <Details/>;
         break;
       case "MENU":
-        View = <Hamburger></Hamburger>
+        View = <Hamburger/>
         break;
       case "SEARCH":
-      View = <SearchPage></SearchPage>
+      View = <SearchPage/>
       break;
       default:
-        View = <Start></Start>;
+        View = <Start/>;
     }
 
     return (

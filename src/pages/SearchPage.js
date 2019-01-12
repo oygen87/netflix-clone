@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { context } from '../store/MyContext';
-import { Search } from 'react-feather';
-import { XCircle } from 'react-feather';
 import { Movie } from '../components/Movie'
 import { SearchBar } from '../components/SearchBar'
 
@@ -47,6 +45,7 @@ export default class SearchPage extends Component {
 
                <SearchBar 
                     state={this.state} 
+                    handleClick={this.handleClick}
                     handleInput={this.handleInput} 
                     handleCancel={this.handleCancel} 
                     handleFocus={this.handleFocus} 
