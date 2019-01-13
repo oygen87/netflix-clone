@@ -5,12 +5,6 @@ export const context = React.createContext();
 
 const reducer = (state, action) => {
     switch(action.type) {
-        case "ADD_1":
-            return { ...state, money: state.money + 1 };
-        case "ADD_500":
-            return { ...state, money: state.money + 500 };
-        case "ADD_CUSTOM":
-            return { ...state, money: state.money + action.payload };
         case "SET_VIEW":
             return {...state, view: action.payload};
         case "SET_MOVIE":

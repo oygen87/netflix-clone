@@ -309,5 +309,22 @@ img {
       }
     }
   }
+  .downloads-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      margin-top:2rem;
+    }
+    svg, p, button {
+      margin-bottom: 1.5rem;
+    }
+    button {
+      border: 1px solid $grey;
+      background-color: transparent;
+      color: $body-font-color;
+      padding: 0.8rem;
+    }
+  }
   
  

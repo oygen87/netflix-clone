@@ -4,6 +4,7 @@ import Start from './pages/Start';
 import Details from './pages/Details';
 import Hamburger from './pages/Hamburger';
 import SearchPage from './pages/SearchPage';
+import Downloads from './pages/Downloads';
 import { Splash } from './pages/Splash';
 import { Home, Search, Download, Menu } from 'react-feather';
 import { context } from './store/MyContext.js';
@@ -12,7 +13,7 @@ import { context } from './store/MyContext.js';
 class App extends Component {
   static contextType = context;
   state = {};
-  
+
   constructor(props) {
     super();
     this.state = {
@@ -21,10 +22,10 @@ class App extends Component {
     };
 
     setTimeout(() => {
-      this.setState({fadeOut: true});
+      this.setState({ fadeOut: true });
     }, 3000);
     setTimeout(() => {
-      this.setState({showSplash: false});
+      this.setState({ showSplash: false });
     }, 4000);
   }
 
@@ -32,19 +33,22 @@ class App extends Component {
     let View;
     switch (this.context.view) {
       case "HOME":
-        View = <div className="animated fadeIn faster"><Start/></div>;
+        View = <div className="animated fadeIn faster"><Start /></div>;
         break;
       case "DETAILS":
-        View = <Details/>;
+        View = <Details />;
         break;
       case "MENU":
-        View = <Hamburger/>
+        View = <Hamburger />
         break;
       case "SEARCH":
-      View = <SearchPage/>
-      break;
+        View = <SearchPage />
+        break;
+      case "DOWNLOADS":
+        View = <Downloads />
+        break;
       default:
-        View = <Start/>;
+        View = <Start />;
     }
 
     const splash = this.state.showSplash ? <Splash fadeOut={this.state.fadeOut} /> : "";
@@ -63,19 +67,19 @@ class App extends Component {
 
           <footer>
             <div onClick={() => this.context.dispatch({ type: "SET_VIEW", payload: "HOME" })}>
-              <Home color={this.context.view === "HOME" || this.context.view === "DETAILS" ? "white" : "grey"}  />
+              <Home color={this.context.view === "HOME" || this.context.view === "DETAILS" ? "white" : "grey"} />
               <span>Home</span>
             </div>
             <div onClick={() => this.context.dispatch({ type: "SET_VIEW", payload: "SEARCH" })}>
-              <Search color={this.context.view === "SEARCH" ? "white" : "grey"}  />
+              <Search color={this.context.view === "SEARCH" ? "white" : "grey"} />
               <span>Search</span>
             </div>
-            <div onClick={() => this.context.dispatch({ type: "SET_VIEW", payload: "DOWNLOAD" })}>
-              <Download color={this.context.view === "DOWNLOAD" ? "white" : "grey"}  />
+            <div onClick={() => this.context.dispatch({ type: "SET_VIEW", payload: "DOWNLOADS" })}>
+              <Download color={this.context.view === "DOWNLOADS" ? "white" : "grey"} />
               <span>Downloads</span>
             </div>
             <div onClick={() => this.context.dispatch({ type: "SET_VIEW", payload: "MENU" })}>
-              <Menu color={this.context.view === "MENU" ? "white" : "grey"}  />
+              <Menu color={this.context.view === "MENU" ? "white" : "grey"} />
               <span>Menu</span>
             </div>
           </footer>
