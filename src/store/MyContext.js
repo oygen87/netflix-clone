@@ -21,7 +21,6 @@ export class MyProvider extends Component {
             movies : Database(),
             movie: {},
             view: "HOME",
-            money : 1337,
             dispatch: action => {
                 this.setState(state => reducer(state, action));
               }
