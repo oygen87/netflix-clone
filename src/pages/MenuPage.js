@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { PlusCircle, Bell, Check, ChevronRight, Edit2 } from 'react-feather';
 
-export default class Hamburger extends Component {
+export default class MenuPage extends Component {
   render() {
     return (
       <div className="menu-container animated fadeIn faster">

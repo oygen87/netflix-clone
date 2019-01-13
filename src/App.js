@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import Start from './pages/Start';
 import Details from './pages/Details';
-import Hamburger from './pages/Hamburger';
+import MenuPage from './pages/MenuPage';
 import SearchPage from './pages/SearchPage';
 import Downloads from './pages/Downloads';
 import { Splash } from './pages/Splash';
@@ -39,7 +39,7 @@ class App extends Component {
         View = <Details />;
         break;
       case "MENU":
-        View = <Hamburger />
+        View = <MenuPage />
         break;
       case "SEARCH":
         View = <SearchPage />
